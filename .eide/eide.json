@@ -1,0 +1,101 @@
+{
+  "name": "f1test",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    ".eide/deps",
+    "UserCode",
+    "CubeMX",
+    "System",
+    "UC"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": []
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "65585ec644017077ac1077deaf9028e3"
+  },
+  "targets": {
+    "Debug": {
+      "excludeList": [],
+      "toolchain": "GCC",
+      "compileConfig": {
+        "cpuType": "Cortex-M3",
+        "floatingPointHardware": "none",
+        "scatterFilePath": "CubeMX/STM32F103C8TX_FLASH.ld",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [],
+          "ROM": []
+        },
+        "options": "null"
+      },
+      "uploader": "OpenOCD",
+      "uploadConfig": {
+        "bin": "",
+        "target": "stm32f1x",
+        "interface": "stlink",
+        "baseAddr": "0x08000000"
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        },
+        "OpenOCD": {
+          "bin": "",
+          "target": "stm32f1x",
+          "interface": "stlink",
+          "baseAddr": "0x08000000"
+        },
+        "STLink": {
+          "bin": "",
+          "proType": "SWD",
+          "resetMode": "default",
+          "runAfterProgram": true,
+          "speed": 4000,
+          "address": "0x08000000",
+          "elFile": "None",
+          "optionBytes": ".eide/debug.st.option.bytes.ini",
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          ".eide/deps",
+          "CubeMX/Core/Inc",
+          "CubeMX/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy",
+          "CubeMX/Drivers/STM32F1xx_HAL_Driver/Inc",
+          "CubeMX/Middlewares/Third_Party/FreeRTOS/Source/include",
+          "CubeMX/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS",
+          "CubeMX/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3",
+          "CubeMX/Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+          "CubeMX/Drivers/CMSIS/Include",
+          "CubeMX/Core/ThreadSafe",
+          "UC"
+        ],
+        "libList": [],
+        "sourceDirList": [],
+        "defineList": [
+          "USE_HAL_DRIVER",
+          "STM32F103xB",
+          "STM32_THREAD_SAFE_STRATEGY=4"
+        ]
+      }
+    }
+  },
+  "version": "3.3"
+}
